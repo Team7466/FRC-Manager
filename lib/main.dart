@@ -24,8 +24,8 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: SizedBox(
-          width: 200, // Butonun genişliği
-          height: 60, // Butonun yüksekliği
+          width: 250, // Butonun genişliği
+          height: 30, // Butonun yüksekliği
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blueAccent, // Buton rengi
