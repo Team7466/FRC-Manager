@@ -58,9 +58,9 @@ class EmptyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Boş Sayfa")),
+      
       body: const Center(
-        child: Text("Burası boş bir ekran"),
+        child: Text("Oyun içi "),
       ),
     );
   }
