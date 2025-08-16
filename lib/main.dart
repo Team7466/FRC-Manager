@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const EmptyPage()),
               );
             },
-            child: const Text("Devam Et"),
+            child: const Text("START"),
           ),
         ),
       ),
@@ -60,7 +60,7 @@ class EmptyPage extends StatelessWidget {
     return Scaffold(
       
       body: const Center(
-        child: Text("Oyun içi "),
+        child: Text("Oyun içi ekran olucak burası"),
       ),
     );
   }
