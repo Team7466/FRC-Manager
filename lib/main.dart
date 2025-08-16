@@ -22,19 +22,19 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end, // Aşağıya yasla
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 50), // Alttan boşluk
-            child: SizedBox(
-              width: 200,
-              height: 60,
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 50), // Buton biraz yukarıda dursun
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end, // En alta hizala
+          children: [
+            SizedBox(
+              width: 250, // Buton genişliği
+              height: 60, // Buton yüksekliği
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueAccent,
+                  backgroundColor: Colors.blueAccent, // Renk
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20), // Yuvarlatılmış köşeler
                   ),
                   elevation: 5,
                   textStyle: const TextStyle(
@@ -48,11 +48,11 @@ class LoginPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const EmptyPage()),
                   );
                 },
-                child: const Text("Devam Et"),
+                child: const Text("START"),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -64,9 +64,8 @@ class EmptyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Boş Sayfa")),
       body: const Center(
-        child: Text("Burası boş bir ekran"),
+        child: Text("Oyun içi ekran olacak burası"),
       ),
     );
   }
