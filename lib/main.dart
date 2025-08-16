@@ -23,14 +23,29 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const EmptyPage()),
-            );
-          },
-          child: const Text("Devam Et"),
+        child: SizedBox(
+          width: 200, // Butonun genişliği
+          height: 60, // Butonun yüksekliği
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueAccent, // Buton rengi
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20), // Köşeleri yuvarlat
+              ),
+              elevation: 5, // Hafif gölge efekti
+              textStyle: const TextStyle(
+                fontSize: 20, // Yazı boyutu
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const EmptyPage()),
+              );
+            },
+            child: const Text("Devam Et"),
+          ),
         ),
       ),
     );
