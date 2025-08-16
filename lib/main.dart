@@ -22,25 +22,27 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 50), // Buton biraz yukarıda dursun
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end, // En alta hizala
-          children: [
-            SizedBox(
-              width: 250, // Buton genişliği
-              height: 60, // Buton yüksekliği
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/arkaplan.jpg"),
+            fit: BoxFit.cover, 
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 120),
+            child: SizedBox(
+              width: 250,
+              height: 60,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueAccent, // Renk
+                  padding: EdgeInsets.zero, 
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20), // Yuvarlatılmış köşeler
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                  elevation: 5,
-                  textStyle: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  elevation: 8,
+                  shadowColor: Colors.black54,
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -48,10 +50,31 @@ class LoginPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const EmptyPage()),
                   );
                 },
-                child: const Text("START"),
+                child: Ink(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Colors.blueAccent, Colors.purpleAccent],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "START",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -70,3 +93,4 @@ class EmptyPage extends StatelessWidget {
     );
   }
 }
+
