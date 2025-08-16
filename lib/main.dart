@@ -22,31 +22,37 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: SizedBox(
-          width: 250, // Butonun genişliği
-          height: 30, // Butonun yüksekliği
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blueAccent, // Buton rengi
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20), // Köşeleri yuvarlat
-              ),
-              elevation: 5, // Hafif gölge efekti
-              textStyle: const TextStyle(
-                fontSize: 20, // Yazı boyutu
-                fontWeight: FontWeight.bold,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end, // Aşağıya yasla
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 50), // Alttan boşluk
+            child: SizedBox(
+              width: 200,
+              height: 60,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 5,
+                  textStyle: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const EmptyPage()),
+                  );
+                },
+                child: const Text("Devam Et"),
               ),
             ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const EmptyPage()),
-              );
-            },
-            child: const Text("START"),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -58,9 +64,9 @@ class EmptyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(title: const Text("Boş Sayfa")),
       body: const Center(
-        child: Text("Oyun içi ekran olucak burası"),
+        child: Text("Burası boş bir ekran"),
       ),
     );
   }
