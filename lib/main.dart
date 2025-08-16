@@ -26,51 +26,36 @@ class LoginPage extends StatelessWidget {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/arkaplan.jpg"),
-            fit: BoxFit.cover, 
+            fit: BoxFit.cover,
           ),
         ),
         child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 120),
-            child: SizedBox(
-              width: 250,
-              height: 60,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.zero, 
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  elevation: 8,
-                  shadowColor: Colors.black54,
+          child: SizedBox(
+            width: 250,
+            height: 60,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.redAccent,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8), // kareye yakın
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const EmptyPage()),
-                  );
-                },
-                child: Ink(
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [Colors.blueAccent, Colors.purpleAccent],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Container(
-                    alignment: Alignment.center,
-                    child: const Text(
-                      "START",
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 2,
-                      ),
-                    ),
-                  ),
+                elevation: 10, // gölge
+                textStyle: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                ),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const EmptyPage()),
+                );
+              },
+              child: const Text(
+                "START",
+                style: TextStyle(
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -88,9 +73,11 @@ class EmptyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: const Center(
-        child: Text("Oyun içi ekran olacak burası"),
+        child: Text(
+          "Oyun içi ekran olacak burası",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
 }
-
