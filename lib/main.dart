@@ -1,5 +1,26 @@
 import 'package:flutter/material.dart';
 
+double startBtnHeight = 57;
+double startBtnWeight = 162; //Tasarımdaki boyutu
+const Color startBtnColor = Color.fromRGBO(
+  255,
+  37,
+  37,
+  100,
+); //Buton arka planının rengini ayarlar
+const Color startBtnTextColor = Color.fromRGBO(
+  20,
+  8,
+  8,
+  100,
+); //Butonun textinin rengini ayarlar
+const Color backgroundColor = Color.fromRGBO(
+  114,
+  152,
+  249,
+  100,
+); //Arka plan rengi
+
 void main() {
   runApp(const MyApp());
 }
@@ -23,19 +44,22 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        //Arka plana resim eklemek için bu kod kullanılacak
         decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/arkaplan.jpg"),
-            fit: BoxFit.cover,
-          ),
+          //   image: DecorationImage(
+          //     image: AssetImage("assets/arkaplan.jpg"),
+          //     fit: BoxFit.cover,
+          //   ),
+          color: backgroundColor,
         ),
         child: Center(
           child: SizedBox(
-            width: 250,
-            height: 60,
+            width: startBtnWeight,
+            height: startBtnHeight,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.redAccent,
+                //Buton arka plan rengi
+                backgroundColor: startBtnColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8), // kareye yakın
                 ),
@@ -49,14 +73,14 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const EmptyPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const EmptyPage(),
+                  ), //Oyun ekranına atacak
                 );
-              },
+              }, //Buton textinin yer aldığı bölüm
               child: const Text(
                 "START",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+                style: TextStyle(color: startBtnTextColor),
               ),
             ),
           ),
