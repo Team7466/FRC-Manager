@@ -10,4 +10,5 @@ class GameScreenColors {
   static const Color backgroundColor = Color(0xFF7298F9);
   static const Color orangeColor = Color(0xFFFF2525);
   static const Color whiteColor = Color(0xFFFFFFFF);
+  static const Color darkBlueColor = Color(0xFF343AB3);
 }
