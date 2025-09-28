@@ -1,7 +1,9 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'resultScreen.dart';
 import 'values/GameScreen/colorValues.dart';
 import 'values/GameScreen/sizeValues.dart';
-import 'jsonLoader.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key, required this.title});
@@ -12,28 +14,106 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
+  List<dynamic> questions = [];
+  bool isLoading = true;
+  int currentQuestionIndex = 0;
+  int totalScore = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    loadQuestions();
+  }
+
+  Future<void> loadQuestions() async {
+    try {
+      final String response =
+          await rootBundle.loadString('assets/question.json');
+      final data = json.decode(response);
+      setState(() {
+        questions = data;
+        isLoading = false;
+      });
+    } catch (e) {
+      print("JSON yüklenirken hata: $e");
+      setState(() {
+        isLoading = false;
+      });
+    }
+  }
+
+  void answerQuestion(int index) {
+    final currentQuestion = questions[currentQuestionIndex];
+
+    if (currentQuestion['answers'] == null ||
+        currentQuestion['answers'].length <= index) return;
+
+    final answer = currentQuestion['answers'][index];
+
+    int score = 0;
+    if (answer != null && answer['score'] != null) {
+      score = answer['score'] is int
+          ? answer['score'] as int
+          : int.tryParse(answer['score'].toString()) ?? 0;
+    }
+
+    setState(() {
+      totalScore += score;
+    });
+
+    nextQuestion();
+  }
+
+  void nextQuestion() {
+    if (currentQuestionIndex < questions.length - 1) {
+      setState(() {
+        currentQuestionIndex++;
+      });
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ResultScreen(totalScore: totalScore),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (questions.isEmpty) {
+      return const Scaffold(
+        body: Center(child: Text("Soru bulunamadı!")),
+      );
+    }
+
+    final currentQuestion = questions[currentQuestionIndex];
+
     return Scaffold(
       body: Container(
         color: GameScreenColors.backgroundColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // ÜSTTE SORU KUTUSU
             SizedBox(
               width: GameScreenSize.textBGWidth,
               height: GameScreenSize.textBGHeight,
               child: DecoratedBox(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    GameScreenSize.borderSmooth,
-                  ),
+                  borderRadius:
+                      BorderRadius.circular(GameScreenSize.borderSmooth),
                   color: GameScreenColors.orangeColor,
                 ),
                 child: Center(
                   child: Text(
-                    "SORU",
+                    (currentQuestion['question'] ?? "Soru yok").toString(),
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color: GameScreenColors.whiteColor,
                       fontSize: GameScreenSize.questionFontSize,
@@ -43,39 +123,37 @@ class _GameScreenState extends State<GameScreen> {
                 ),
               ),
             ),
-
-            const SizedBox(
-              height: 40,
-            ), // Turuncu kutu ile butonlar arası boşluk
-            // ALTTA BUTONLAR
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(4, (index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // buton tıklandığında yapılacak işlem
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: GameScreenColors.darkBlueColor,
-                      maximumSize: GameScreenSize.questionBtnSize,
-                      minimumSize:
-                          GameScreenSize.questionBtnSize, // buton boyutu
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+              children: List.generate(
+                currentQuestion['answers']?.length ?? 0,
+                (index) {
+                  final answer = currentQuestion['answers'][index];
+                  final answerText = (answer?['text'] ?? "").toString();
+
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: ElevatedButton(
+                      onPressed: () => answerQuestion(index),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: GameScreenColors.darkBlueColor,
+                        maximumSize: GameScreenSize.questionBtnSize,
+                        minimumSize: GameScreenSize.questionBtnSize,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Text(
+                        answerText,
+                        style: const TextStyle(
+                          color: GameScreenColors.whiteColor,
+                        ),
                       ),
                     ),
-                    child: Text(
-                      'A${index + 1}',
-                      style: const TextStyle(
-                        color: GameScreenColors.whiteColor,
-                        fontStyle: FontStyle.normal,
-                      ),
-                    ),
-                  ),
-                );
-              }),
+                  );
+                },
+              ),
             ),
           ],
         ),
