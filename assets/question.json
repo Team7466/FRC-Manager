@@ -1,6 +1,7 @@
 [
   {
     "number": 1,
+    "week":1,
     "question": "1. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 10},
@@ -11,6 +12,7 @@
   },
   {
     "number": 2,
+    "week":2,
     "question": "2. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},
@@ -21,6 +23,7 @@
   },
   {
     "number": 3,
+    "week":3,
     "question": "3. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},
@@ -31,6 +34,7 @@
   },
   {
     "number": 4,
+    "week":4,
     "question": "4. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},
@@ -41,6 +45,7 @@
   },
   {
     "number": 5,
+    "week":5,
     "question": "5. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 10},
@@ -51,6 +56,7 @@
   },
   {
     "number": 6,
+    "week":6,
     "question": "6. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},
@@ -61,6 +67,7 @@
   },
   {
     "number": 7,
+    "week":7,
     "question": "7. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},
@@ -71,6 +78,7 @@
   },
   {
     "number": 8,
+    "week":8,
     "question": "8. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},
@@ -81,6 +89,7 @@
   },
   {
     "number": 9,
+    "week":9,
     "question": "9. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 10},
@@ -91,6 +100,7 @@
   },
   {
     "number": 10,
+    "week":10 ,
     "question": "10. Bu kaçıncı soru?",
     "answers": [
       {"text": "1", "score": 0},

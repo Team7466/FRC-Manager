@@ -27,11 +27,28 @@ class _GameScreenState extends State<GameScreen> {
 
   Future<void> loadQuestions() async {
     try {
-      final String response =
-          await rootBundle.loadString('assets/question.json');
-      final data = json.decode(response);
+      final String response = await rootBundle.loadString(
+        'assets/question.json',
+      );
+      final List<dynamic> data = json.decode(response);
+
+      //Hafta bazlı gruplama
+      Map<int, List<dynamic>> weekMap = {};
+      for (var q in data) {
+        int week = q['week'] ?? 0;
+        weekMap.putIfAbsent(week, () => []);
+        weekMap[week]!.add(q);
+      }
+
+      //Rastgele soru seçme
+      List<dynamic> selectedQuestions = [];
+      weekMap.forEach((week, questionList) {
+        questionList.shuffle(); //Soruları map içerisinde rastgele sıralıyoruz
+        selectedQuestions.add(questionList.first); //ilk değeri alıyoruz.
+      });
       setState(() {
-        questions = data;
+        questions =
+            selectedQuestions; //Haftaya göre ve rastgele sıralanmış soruları seçtik
         isLoading = false;
       });
     } catch (e) {
@@ -46,7 +63,8 @@ class _GameScreenState extends State<GameScreen> {
     final currentQuestion = questions[currentQuestionIndex];
 
     if (currentQuestion['answers'] == null ||
-        currentQuestion['answers'].length <= index) return;
+        currentQuestion['answers'].length <= index)
+      return;
 
     final answer = currentQuestion['answers'][index];
 
@@ -82,15 +100,11 @@ class _GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
     if (isLoading) {
-      return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
     if (questions.isEmpty) {
-      return const Scaffold(
-        body: Center(child: Text("Soru bulunamadı!")),
-      );
+      return const Scaffold(body: Center(child: Text("Soru bulunamadı!")));
     }
 
     final currentQuestion = questions[currentQuestionIndex];
@@ -106,8 +120,9 @@ class _GameScreenState extends State<GameScreen> {
               height: GameScreenSize.textBGHeight,
               child: DecoratedBox(
                 decoration: BoxDecoration(
-                  borderRadius:
-                      BorderRadius.circular(GameScreenSize.borderSmooth),
+                  borderRadius: BorderRadius.circular(
+                    GameScreenSize.borderSmooth,
+                  ),
                   color: GameScreenColors.orangeColor,
                 ),
                 child: Center(
@@ -126,34 +141,33 @@ class _GameScreenState extends State<GameScreen> {
             const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                currentQuestion['answers']?.length ?? 0,
-                (index) {
-                  final answer = currentQuestion['answers'][index];
-                  final answerText = (answer?['text'] ?? "").toString();
+              children: List.generate(currentQuestion['answers']?.length ?? 0, (
+                index,
+              ) {
+                final answer = currentQuestion['answers'][index];
+                final answerText = (answer?['text'] ?? "").toString();
 
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: ElevatedButton(
-                      onPressed: () => answerQuestion(index),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: GameScreenColors.darkBlueColor,
-                        maximumSize: GameScreenSize.questionBtnSize,
-                        minimumSize: GameScreenSize.questionBtnSize,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      child: Text(
-                        answerText,
-                        style: const TextStyle(
-                          color: GameScreenColors.whiteColor,
-                        ),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: ElevatedButton(
+                    onPressed: () => answerQuestion(index),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: GameScreenColors.darkBlueColor,
+                      maximumSize: GameScreenSize.questionBtnSize,
+                      minimumSize: GameScreenSize.questionBtnSize,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                  );
-                },
-              ),
+                    child: Text(
+                      answerText,
+                      style: const TextStyle(
+                        color: GameScreenColors.whiteColor,
+                      ),
+                    ),
+                  ),
+                );
+              }),
             ),
           ],
         ),
