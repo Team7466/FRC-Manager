@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'resultScreen.dart';
 import 'values/GameScreen/colorValues.dart';
 import 'values/GameScreen/sizeValues.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key, required this.title});
@@ -100,7 +101,14 @@ class _GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
     if (isLoading) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      return Scaffold(
+        body: Center(
+          child: LoadingAnimationWidget.staggeredDotsWave(
+            color: GameScreenColors.orangeColor,
+            size: 70,
+          ),
+        ),
+      );
     }
 
     if (questions.isEmpty) {
