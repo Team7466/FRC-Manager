@@ -63,6 +63,15 @@ class ResultScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: GameScreenColors.orangeColor,
+        onPressed: () {
+          Navigator.pop(
+            context,
+          ); //mainScreene gideceğiz. Merge işlemi yapıldıktan sonra değişecek.
+        },
+        child: const Icon(Icons.home, color: Colors.black),
+      ),
     );
   }
 }
