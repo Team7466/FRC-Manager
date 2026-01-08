@@ -2,50 +2,62 @@ import 'package:flutter/material.dart';
 import 'values/GameScreen/colorValues.dart';
 
 class ResultScreen extends StatelessWidget {
-  final int totalScore;
+  final Map<String, int> scores;
 
-  const ResultScreen({super.key, required this.totalScore});
+  const ResultScreen({super.key, required this.scores});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: GameScreenColors.backgroundColor,
-      body: Center(
+      appBar: AppBar(
+        title: const Text(
+          "Sonuçlar",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 27,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: GameScreenColors.backgroundColor,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Tebrikler!',
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: GameScreenColors.orangeColor,
-              ),
+            const Text(
+              "Kategori Puanların",
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
-            Text(
-              'Toplam Puanınız: $totalScore',
-              style: TextStyle(
-                fontSize: 24,
-                color: GameScreenColors.whiteColor,
-              ),
-            ),
-            const SizedBox(height: 40),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: GameScreenColors.darkBlueColor,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              child: const Text(
-                'Tekrar Başlat',
-                style: TextStyle(color: GameScreenColors.whiteColor),
+
+            Expanded(
+              child: ListView(
+                children: scores.entries.map((entry) {
+                  return Card(
+                    color: GameScreenColors.orangeColor,
+                    child: ListTile(
+                      title: Text(
+                        entry.key.toUpperCase(),
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: GameScreenColors.whiteColor,
+                        ),
+                      ),
+                      trailing: Text(
+                        entry.value.toString(),
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: entry.value >= 0
+                              ? Colors.green
+                              : Colors
+                                    .black, //bunları const olarak eklememiz lazım.
+                        ),
+                      ),
+                    ),
+                  );
+                }).toList(),
               ),
             ),
           ],

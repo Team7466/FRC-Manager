@@ -85,21 +85,21 @@
         "text": "Her departmana net görevler verirsiniz.",
         "mechanic": 1,
         "software": 1,
-        "electric": 1,
+        "electrical": 1,
         "media": 1
       },
       {
         "text": "Görev dağılımını yapmayıp herkesin her şeyi deneyimlemesine izin verirsiniz.",
         "mechanic": 0,
         "software": 1,
-        "electric": 1,
+        "electrical": 1,
         "media": -1
       },
       {
         "text": "Mentorlar departman liderlerini belirler.",
         "mechanic": 1,
         "software": 1,
-        "electric": 0,
+        "electrical": 0,
         "media": -1
       },
       {
@@ -107,7 +107,7 @@
         "media_communication": 2,
         "mechanic": 0,
         "software": 0,
-        "electric": 0
+        "electrical": 0
       }
     ]
   },

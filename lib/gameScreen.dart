@@ -19,6 +19,14 @@ class _GameScreenState extends State<GameScreen> {
   bool isLoading = true;
   int currentQuestionIndex = 0;
   int totalScore = 0;
+  Map<String, int> scores = {
+    "mechanic": 0,
+    "software": 0,
+    "electrical": 0,
+    "pr": 0,
+    "finance": 0,
+    "moral": 0,
+  };
 
   @override
   void initState() {
@@ -62,22 +70,20 @@ class _GameScreenState extends State<GameScreen> {
 
   void answerQuestion(int index) {
     final currentQuestion = questions[currentQuestionIndex];
+    final answer = currentQuestion['answers'][index];
 
     if (currentQuestion['answers'] == null ||
         currentQuestion['answers'].length <= index)
       return;
 
-    final answer = currentQuestion['answers'][index];
-
-    int score = 0;
-    if (answer != null && answer['score'] != null) {
-      score = answer['score'] is int
-          ? answer['score'] as int
-          : int.tryParse(answer['score'].toString()) ?? 0;
-    }
+    if (answer == null) return;
 
     setState(() {
-      totalScore += score;
+      answer.forEach((key, value) {
+        if (key != "text" && value is int) {
+          scores[key] = (scores[key] ?? 0) + value;
+        }
+      });
     });
 
     nextQuestion();
@@ -91,9 +97,7 @@ class _GameScreenState extends State<GameScreen> {
     } else {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (context) => ResultScreen(totalScore: totalScore),
-        ),
+        MaterialPageRoute(builder: (context) => ResultScreen(scores: scores)),
       );
     }
   }
