@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mainscreenforfrcmanager/main.dart';
 import 'values/GameScreen/colorValues.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -68,6 +69,7 @@ class ResultScreen extends StatelessWidget {
         onPressed: () {
           Navigator.pop(
             context,
+            MaterialPageRoute(builder: (context) => MainPage()),
           ); //mainScreene gideceğiz. Merge işlemi yapıldıktan sonra değişecek.
         },
         child: const Icon(Icons.home, color: Colors.black),
