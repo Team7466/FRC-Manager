@@ -1,0 +1,10 @@
+^D:\FLUTTERPROJECTS\FRC-MANAGER\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/FlutterProjects/FRC-Manager/windows -BD:/FlutterProjects/FRC-Manager/build/windows/x64 --check-stamp-file D:/FlutterProjects/FRC-Manager/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

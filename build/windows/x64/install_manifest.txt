@@ -1,0 +1,14 @@
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/icudtl.dat
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/flutter_windows.dll
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/assets/question.json
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/NativeAssetsManifest.json
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+D:/FlutterProjects/FRC-Manager/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag

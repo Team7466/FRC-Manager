@@ -1,0 +1,1308 @@
+[
+  {
+    "number": 1,
+    "week": 1,
+    "question": "Kickoff’ta oyunu öğrendiniz, ilk adım ne olacak?",
+    "answers": [
+      {
+        "text": "Oyun kurallarını detaylıca inceleyip kurallara hakim olursunuz.",
+        "mechanic": 3,
+        "pr": -1
+      },
+      {
+        "text": "Hemen robot tasarımı için fikir üretmeye başlarsınız.",
+        "mechanic": 2,
+        "pr": -1
+      },
+      {
+        "text": "Takımı küçük gruplara bölüp herkesin kendi alanında çalışmasına izin verirsiniz.",
+        "mechanic": 1
+      },
+      {
+        "text": "Sosyal medyada “Yeni sezon başladı!” paylaşımı yaparsınız.",
+        "pr": 3,
+        "mechanic": -1
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 1,
+    "question": "Oyun stratejisini belirlemek için bir yol seçmeniz gerekiyor.",
+    "answers": [
+      {
+        "text": "Önce oyunun puanlama sistemini analiz edersiniz.",
+        "mechanic": 2
+      },
+      {
+        "text": "Diğer takımların önceki yıllardaki robotlarını araştırırsınız.",
+        "pr": 2,
+        "mechanic": 1
+      },
+      {
+        "text": "Beyin fırtınası oturumu düzenleyip fikir toplarsınız.",
+        "pr": 2,
+        "mechanic": 1
+      },
+      {
+        "text": "Direkt robotun prototipini çizmeye başlarsınız.",
+        "mechanic": 3
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 1,
+    "question": "Takım üyeleri arasında iş yükü paylaşımında tartışma çıkıyor.",
+    "answers": [
+      {
+        "text": "Mentor araya girip işleri yeniden dağıtır.",
+        "mechanic": 1,
+        "pr": -1
+      },
+      {
+        "text": "Takım içi toplantı yapıp ortak karar alırsınız.",
+        "pr": 3
+      },
+      {
+        "text": "Çalışmaya devam edenleri ödüllendirirsiniz.",
+        "mechanic": 2,
+        "pr": -1
+      },
+      {
+        "text": "Tartışmayı görmezden gelip süreye odaklanırsınız.",
+        "mechanic": 1,
+        "pr": -2
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 1,
+    "question": "Takım organizasyonu yapılacak, nasıl ilerlersiniz?",
+    "answers": [
+      {
+        "text": "Her departmana net görevler verirsiniz.",
+        "mechanic": 1,
+        "software": 1,
+        "electrical": 1,
+        "media": 1
+      },
+      {
+        "text": "Görev dağılımını yapmayıp herkesin her şeyi deneyimlemesine izin verirsiniz.",
+        "mechanic": 0,
+        "software": 1,
+        "electrical": 1,
+        "media": -1
+      },
+      {
+        "text": "Mentorlar departman liderlerini belirler.",
+        "mechanic": 1,
+        "software": 1,
+        "electrical": 0,
+        "media": -1
+      },
+      {
+        "text": "Takım içinde oylama yaparak lider seçersiniz.",
+        "media_communication": 2,
+        "mechanic": 0,
+        "software": 0,
+        "electrical": 0
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 1,
+    "question": "Malzeme ve bütçe planı yapılacak.",
+    "answers": [
+      {
+        "text": "İlk haftadan sponsorlarla iletişime geçersiniz.",
+        "pr": 3,
+        "finance": 2
+      },
+      {
+        "text": "Malzeme listesi çıkarıp ihtiyaçları belirlersiniz.",
+        "mechanic": 2,
+        "finance": -1
+      },
+      {
+        "text": "Önce mevcut malzemeleri kontrol edersiniz.",
+        "mechanic": 1,
+        "finance": 1
+      },
+      {
+        "text": "Sponsorluk kısmını şimdilik erteleyip robot planına odaklanırsınız.",
+        "mechanic": 2,
+        "pr": -1,
+        "finance": -2
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 2,
+    "question": "Robotun tasarımının çok geç olmadan tamamlanması gerekiyor. Nasıl bir yol izleyeceksin?",
+    "answers": [
+      {
+        "text": "Tasarımı en kısa zamanda bitirmek için mekanik ve CAD bilgisi olan bazı medya üyelerini de robot çiziminde çalıştır.",
+        "mechanic": 5,
+        "pr": -5
+      },
+      {
+        "text": "Sadece mekanik üyelerini çalıştır ancak kısa zamanda fazla iş yaptır.",
+        "mechanic": 5,
+        "moral": -5
+      },
+      {
+        "text": "Acele etmeye ihtiyacımız yok. Mekanik üyelerine fazla ağırlık verme ve acele etmeden çalıştır.",
+        "mechanic": 2,
+        "moral": 2
+      },
+      {
+        "text": "Mekanik üyeleri robotu kendi başına tamamlayabilir, baskı yapmaya gerek yok. Sadece mekanik üyelerini çalıştır.",
+        "mechanic": 3
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 2,
+    "question": "Takımın hala birçok ihtiyacı var ve sponsorlara ihtiyaç var. Nereden başlayacaksınız?",
+    "answers": [
+      {
+        "text": "İlk önceliğimiz robot olmalı. Sanayi bölgesinden iş yerlerinin listesini çıkararak başlamalıyız.",
+        "mechanic": 2,
+        "finance": 2
+      },
+      {
+        "text": "Direkt para sağlayabilecek sponsorlukları daha avantajlı buldunuz ve bu yönde şirketler aramaya başladınız.",
+        "finance": 5
+      },
+      {
+        "text": "İşbirliği sağlayabilecek şirket ve mekanları aramaya başladınız.",
+        "pr": 2,
+        "finance": 2
+      },
+      {
+        "text": "Finans departmanı üyelerini şirket listelerken biraz daha fazla çalıştırmaya karar verdin.",
+        "finance": 4,
+        "moral": -3
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 2,
+    "question": "Yeni üyelerin deneyimlenmesi için bir eğitim planlayacaksınız. Hangi departman önceliğin olacak?",
+    "answers": [
+      {
+        "text": "Finans eğitimi yapmaya karar verdiniz.",
+        "finance": 4
+      },
+      {
+        "text": "Mekanik ve elektronik eğitimi planlayacaksınız.",
+        "mechanic": 2
+      },
+      {
+        "text": "Yazılım eğitimi yapmaya karar verdiniz.",
+        "software": 4
+      },
+      {
+        "text": "Medya eğitimi yapmayı daha yararlı buldun.",
+        "pr": 4
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 2,
+    "question": "Robot tasarımı sırasında ekip içinde fikir ayrılığı çıktı. Hangi yöntemi seçersiniz?",
+    "answers": [
+      {
+        "text": "En tecrübeli üyenin dediğini yaparsınız.",
+        "mechanic": 3,
+        "moral": -2
+      },
+      {
+        "text": "Herkesin fikrini alıp ortak bir prototip denersiniz.",
+        "mechanic": 2,
+        "moral": 3
+      },
+      {
+        "text": "Vakit kaybetmemek için ilk sunulan fikri uygularsınız.",
+        "mechanic": 1,
+        "moral": -1
+      },
+      {
+        "text": "Mentorun karar vermesini beklersiniz.",
+        "mechanic": 0,
+        "moral": -2
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 3,
+    "question": "Robotun ana işlevini test etmek için yapılan prototip ilk denemede çalışmadı. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Hemen baştan yeni bir tasarım yaparız.",
+        "mechanic": 1,
+        "pr": -1
+      },
+      {
+        "text": "Sorunun kaynağını bulmak için prototipi detaylıca inceleriz.",
+        "mechanic": 2
+      },
+      {
+        "text": "Üçüncü bir prototip için malzeme sipariş eder, ilk ikisini hurda yaparız.",
+        "mechanic": 2,
+        "pr": -2
+      },
+      {
+        "text": "Mekanik ekibini bir kenara bırakıp yazılım ekibinin daha fazla kod yazmasını isteriz.",
+        "mechanic": -3
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 3,
+    "question": "Potansiyel bir sponsor toplantısı yarın ama hazırlığınız yok ve atölye taşınıyor. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Tüm takımı acil toplantıya çağırır, herkesin işini bırakıp sunuma odaklanmasını istersiniz.",
+        "pr": 4,
+        "mechanic": -2
+      },
+      {
+        "text": "Sponsorluk liderleri gece boyunca sunum hazırlar. Diğerleri taşınma işlemi için enerji depolar.",
+        "pr": 2
+      },
+      {
+        "text": "Sponsorluk departmanından bir-iki kişi basit bir sunum hazırlar. Odağı taşınmaya verirsiniz.",
+        "pr": 1,
+        "mechanic": 1
+      },
+      {
+        "text": "Sponsoru nazikçe reddeder, şimdilik hazır olmadığınızı söylersiniz.",
+        "pr": -3,
+        "mechanic": 3
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 3,
+    "question": "Yazılım ekibi robotun otonom sürüşü için ekstra süre istiyor ama mekanik ekibi test yapmak istiyor.",
+    "answers": [
+      {
+        "text": "Robotu yazılım ekibine verirsiniz, mekanik bekler.",
+        "software": 3,
+        "mechanic": -2
+      },
+      {
+        "text": "Zamanı ikiye böler, vardiyalı çalışmaya geçersiniz.",
+        "software": 2,
+        "mechanic": 2,
+        "moral": -2
+      },
+      {
+        "text": "Mekanik ekibine öncelik verirsiniz, yazılım simülasyonda devam eder.",
+        "mechanic": 3,
+        "software": -1
+      },
+      {
+        "text": "Kararı mentorun vermesini istersiniz.",
+        "moral": -2
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 3,
+    "question": "Takım içi motivasyonun düştüğünü fark ettiniz.",
+    "answers": [
+      {
+        "text": "Bir akşam yemeği veya sosyal etkinlik düzenlersiniz.",
+        "moral": 5,
+        "finance": -2
+      },
+      {
+        "text": "Çalışma saatlerini azaltıp herkesin dinlenmesini sağlarsınız.",
+        "moral": 3,
+        "mechanic": -2
+      },
+      {
+        "text": "Motivasyon konuşması yapıp hedefleri hatırlatırsınız.",
+        "moral": 2
+      },
+      {
+        "text": "Görmezden gelip iş disiplinini artırırsınız.",
+        "moral": -5,
+        "mechanic": 1
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 3,
+    "question": "Sosyal medya hesaplarınızda etkileşim düştü.",
+    "answers": [
+      {
+        "text": "Mekanik ekibinden üretim aşaması videoları istersiniz.",
+        "pr": 3,
+        "mechanic": -1
+      },
+      {
+        "text": "Eski sezon videolarından bir kolaj paylaşırsınız.",
+        "pr": 2
+      },
+      {
+        "text": "Bir çekiliş düzenleyip takipçi kazanmaya çalışırsınız.",
+        "pr": 4,
+        "finance": -1
+      },
+      {
+        "text": "Paylaşım yapmayı durdurup robotun bitmesini beklersiniz.",
+        "pr": -3
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 4,
+    "question": "Robotun montajında kritik bir parçanın eksik olduğunu fark ettiniz. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Hemen yeni bir parça sipariş edersiniz.",
+        "mechanic": 3,
+        "finance": -2
+      },
+      {
+        "text": "Eksik parçayı 3D yazıcı ile kendiniz basmayı denersiniz.",
+        "mechanic": 2,
+        "finance": -1
+      },
+      {
+        "text": "Parçayı çevredeki başka bir takımdan ödünç istersiniz.",
+        "mechanic": 1,
+        "pr": 2
+      },
+      {
+        "text": "Parçayı pas geçip mekanizmayı o parça olmadan revize edersiniz.",
+        "mechanic": -2,
+        "moral": -1
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 4,
+    "question": "Çok önemli bir sponsor sunumu ile robotun şasi testi aynı saate denk geldi.",
+    "answers": [
+      {
+        "text": "Robot testlerini durdurup tüm odağı sunuma verirsiniz.",
+        "finance": 4,
+        "mechanic": -3
+      },
+      {
+        "text": "Takımı ikiye bölersiniz; bir grup sunuma, bir grup teste gider.",
+        "finance": 2,
+        "mechanic": 2,
+        "moral": -1
+      },
+      {
+        "text": "Sunumu erteleyip robotun yürür şasisini görmeyi seçersiniz.",
+        "mechanic": 4,
+        "finance": -2
+      },
+      {
+        "text": "Sponsoru atölyeye davet edip testi izlemesini istersiniz.",
+        "pr": 5,
+        "mechanic": 1
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 4,
+    "question": "Elektronik panonun yerleşimi sırasında kablo karmaşası yaşanıyor.",
+    "answers": [
+      {
+        "text": "Kabloları etiketleyip düzenli bir planla yerleştirirsiniz.",
+        "electrical": 4,
+        "mechanic": -1
+      },
+      {
+        "text": "Hızlıca bağlayıp robotun çalışıp çalışmadığına bakarsınız.",
+        "electrical": 1,
+        "mechanic": 2,
+        "moral": -1
+      },
+      {
+        "text": "Yazılım ekibinden kablolama için yardım istersiniz.",
+        "electrical": 2,
+        "software": -2
+      },
+      {
+        "text": "Eski robotun hazır panosunu söküp buna takarsınız.",
+        "electrical": 2,
+        "finance": 2,
+        "mechanic": -2
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 4,
+    "question": "Yazılım ekibi simülasyon testlerinde sürekli hata alıyor.",
+    "answers": [
+      {
+        "text": "Hataları çözmek için mentordan teknik destek istersiniz.",
+        "software": 3,
+        "moral": 1
+      },
+      {
+        "text": "Kodları basitleştirip otonom görevlerinden vazgeçersiniz.",
+        "software": -2,
+        "mechanic": 1
+      },
+      {
+        "text": "Gece boyu atölyede kalıp hatayı bulana kadar çalışırsınız.",
+        "software": 4,
+        "moral": -4
+      },
+      {
+        "text": "Mekanik ekipten sensörlerin yerini değiştirmesini istersiniz.",
+        "software": 2,
+        "mechanic": -3
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 4,
+    "question": "Takım bütçesi beklenenden hızlı tükeniyor.",
+    "answers": [
+      {
+        "text": "Acil bir kermes veya okul içi satış etkinliği düzenlersiniz.",
+        "finance": 3,
+        "pr": 2,
+        "moral": -1
+      },
+      {
+        "text": "Lüks parçalardan vazgeçip daha ucuz alternatiflere yönelirsiniz.",
+        "finance": 2,
+        "mechanic": -2
+      },
+      {
+        "text": "Sponsorlardan ek bütçe talep etmek için mail atarsınız.",
+        "finance": 3,
+        "pr": -1
+      },
+      {
+        "text": "Harcamaları durdurup sadece zorunlu parçaları alırsınız.",
+        "finance": 1,
+        "mechanic": -1
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 5,
+    "question": "Mekanik montaj bitti ancak robotun ağırlığı limitin çok sınırında. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Dayanıklılığı azaltma pahasına parçalara hafifletme delikleri (speed holes) açarsınız.",
+        "mechanic": 3,
+        "moral": -1
+      },
+      {
+        "text": "Bazı dekoratif panelleri ve ağır korumaları sökersiniz.",
+        "mechanic": 2,
+        "pr": -2
+      },
+      {
+        "text": "Ağırlık yapan sensörleri çıkarıp yazılım ekibinden kodla çözüm istersiniz.",
+        "mechanic": 2,
+        "software": -3
+      },
+      {
+        "text": "Hata payı bırakmak için robotu en baştan daha hafif malzemelerle revize edersiniz.",
+        "mechanic": 1,
+        "finance": -4,
+        "moral": -3
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 5,
+    "question": "Yerel bir CNC atölyesi robot parçalarınızı ücretsiz üretmeyi teklif etti ancak parçaları 3 gün sonra teslim edecekler.",
+    "answers": [
+      {
+        "text": "Teklifi kabul edip 3 gün boyunca yazılım ve PR çalışmalarına odaklanırsınız.",
+        "finance": 4,
+        "mechanic": -2,
+        "software": 2
+      },
+      {
+        "text": "Zaman kaybetmemek için parçaları atölyede kendi imkanlarınızla üretirsiniz.",
+        "mechanic": 3,
+        "finance": -2
+      },
+      {
+        "text": "Sadece en zor parçaları onlara gönderip kalanları kendiniz yaparsınız.",
+        "mechanic": 2,
+        "finance": 2
+      },
+      {
+        "text": "Atölyeye gidip üretimi hızlandırmaları için başlarında beklersiniz.",
+        "pr": -1,
+        "mechanic": 1,
+        "moral": -2
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 5,
+    "question": "Yazılım ekibi, robotun otonom periyotta düzgün gitmediğini fark etti. Sorun sensör yerleşiminden kaynaklı olabilir.",
+    "answers": [
+      {
+        "text": "Mekanik ekipten sensörlerin yerini değiştirmesini istersiniz.",
+        "software": 3,
+        "mechanic": -3
+      },
+      {
+        "text": "Yazılım ekibinden sensör hatasını kodla (kalibrasyonla) çözmesini istersiniz.",
+        "software": 2,
+        "moral": -2
+      },
+      {
+        "text": "Otonom moddan vazgeçip sadece teleop (manuel) sürüşe odaklanırsınız.",
+        "software": -4,
+        "mechanic": 1
+      },
+      {
+        "text": "Yeni ve daha hassas bir sensör sipariş edersiniz.",
+        "software": 2,
+        "finance": -3
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 5,
+    "question": "Büyük bir şirket, takımı genel merkezinde sunum yapmaya davet etti.",
+    "answers": [
+      {
+        "text": "Takım kaptanı ve PR lideri gidip profesyonel bir sunum yapar.",
+        "pr": 4,
+        "finance": 3
+      },
+      {
+        "text": "Robotu da yanınızda götürüp etkileyici bir demo yaparsınız.",
+        "pr": 5,
+        "mechanic": -2,
+        "finance": 2
+      },
+      {
+        "text": "Tüm takımı götürüp kalabalık bir gövde gösterisi yaparsınız.",
+        "pr": 3,
+        "moral": 3,
+        "finance": -1
+      },
+      {
+        "text": "Çalışmaların yoğunluğunu bahane edip online toplantı talep edersiniz.",
+        "pr": -2,
+        "mechanic": 2
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 5,
+    "question": "Test sürüşü sırasında robotun zinciri koptu ve dişlilere zarar verdi.",
+    "answers": [
+      {
+        "text": "Hemen yedek parçalarla tamir edip teste devam edersiniz.",
+        "mechanic": 3,
+        "finance": -1
+      },
+      {
+        "text": "Sorunun nedenini bulana kadar testleri durdurup analiz yaparsınız.",
+        "mechanic": 2,
+        "moral": -1
+      },
+      {
+        "text": "Daha güçlü bir zincir sistemi için tasarımı güncellersiniz.",
+        "mechanic": 4,
+        "finance": -2,
+        "moral": -2
+      },
+      {
+        "text": "Sürücüye kızıp daha dikkatli olmasını istersiniz.",
+        "moral": -4
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 6,
+    "question": "Stop Build Day'e (Robot Teslimi) sadece 24 saat kaldı ancak robot limitin 3 pound üzerinde çıktı. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Kritik olan ancak ağırlık yapan bir sensör sistemini sökersiniz.",
+        "mechanic": 3,
+        "software": -4,
+        "electrical": -1
+      },
+      {
+        "text": "Hızla robotun şasisi üzerinde rastgele hafifletme delikleri açarsınız.",
+        "mechanic": -2,
+        "pr": -1,
+        "electrical": -2
+      },
+      {
+        "text": "Robotu olduğu gibi paketlersiniz, yarışma alanındaki tartıda bir hata payı olmasını umarsınız.",
+        "pr": 1,
+        "finance": -5
+      },
+      {
+        "text": "Dış kaplamadaki dekoratif panelleri ve sponsor logolarının olduğu levhaları sökersiniz.",
+        "mechanic": 4,
+        "pr": -2
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 6,
+    "question": "Robotun çantaya girmesine saatler kala, yazılım ekibi otonom sürüşte ciddi bir hata buldu.",
+    "answers": [
+      {
+        "text": "Otonom sürüşü tamamen iptal edip güvenli bir şekilde paketlersiniz.",
+        "software": -3,
+        "mechanic": 2
+      },
+      {
+        "text": "Paketleme saatini son ana kadar erteleyip hatayı çözmeye çalışırsınız.",
+        "software": 4,
+        "moral": -3
+      },
+      {
+        "text": "Hatayı görmezden gelip yarışma alanındaki antrenmanlarda çözmeye karar verirsiniz.",
+        "software": 1,
+        "moral": 1
+      },
+      {
+        "text": "Yazılım ekibine ek süre tanıyıp paketleme işlemini PR ekibine yaptırırsınız.",
+        "software": 2,
+        "pr": -2,
+        "mechanic": -1
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 6,
+    "question": "Impact ödülü ekibinden bir üyenizin aynı zamanda robotu kodlaması gerekiyor ve fotoğraflar eksik. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Fotoğrafları tamamlamak için kodlama süresini geciktirirsiniz.",
+        "pr": 2,
+        "mechanic": -1
+      },
+      {
+        "text": "Fotoğrafları pas geçer, ödül şansını riske atıp robotu kodlarsınız.",
+        "mechanic": 2,
+        "pr": -1
+      },
+      {
+        "text": "Impact ekibinden başka bir projenin eski fotoğraflarını kullanmasını istersiniz.",
+        "pr": 2,
+        "moral": -1
+      },
+      {
+        "text": "Başka bir üyenin hızlıca bir video yorumu kaydetmesini isteyip fotoğrafı telafi edersiniz.",
+        "pr": 1,
+        "mechanic": 1
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 6,
+    "question": "Yarışma sezonu bitti, gelecek sezon için bütçeyi nasıl yöneteceksiniz?",
+    "answers": [
+      {
+        "text": "Tüm artan malzemeleri ve eski robot parçalarını satarsınız.",
+        "finance": 4,
+        "mechanic": -3
+      },
+      {
+        "text": "Mevcut bütçeyi koruyup off-season etkinliklerine katılmazsınız.",
+        "finance": 3,
+        "moral": -2
+      },
+      {
+        "text": "Kalan bütçeyle yeni üyelere eğitim setleri alırsınız.",
+        "moral": 4,
+        "finance": -2,
+        "mechanic": 2
+      },
+      {
+        "text": "Yeni sponsorlar arayarak bütçeyi büyütmeye odaklanırsınız.",
+        "finance": 5,
+        "pr": 3
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 7,
+    "question": "Yarışmaya gitmeden önceki son antrenmanda robotun kolu (intake) kırıldı. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Aynı parçayı hemen yedek malzemelerle yeniden üretip takarsınız.",
+        "mechanic": 4,
+        "finance": -2
+      },
+      {
+        "text": "Tasarımı zayıf bulup daha sağlam ama ağır bir metal parça ile değiştirirsiniz.",
+        "mechanic": 3,
+        "weight_limit": -2
+      },
+      {
+        "text": "Parçayı tamir etmek yerine o mekanizmayı iptal edip savunma robotu olmaya odaklanırsınız.",
+        "mechanic": -5,
+        "strategy": 2
+      },
+      {
+        "text": "Hızlı yapıştırıcı ve bantla geçici bir çözüm yapıp yarışma alanına bırakırsınız.",
+        "mechanic": 1,
+        "moral": -2
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 7,
+    "question": "Sürücü (Driver) antrenmanları sırasında yazılımın kontrolü çok hassas olmadığı için robot duvara çarpıyor.",
+    "answers": [
+      {
+        "text": "Yazılım ekibinden 'Deadzone' ve hassasiyet ayarlarını güncellemesini istersiniz.",
+        "software": 4,
+        "mechanic": 1
+      },
+      {
+        "text": "Sürücünün daha fazla pratik yaparak alışmasını istersiniz.",
+        "moral": -2,
+        "driver_skill": 2
+      },
+      {
+        "text": "Robotun hızını %50 oranında kısıtlayıp güvenli sürüşü seçersiniz.",
+        "software": 2,
+        "performance": -3
+      },
+      {
+        "text": "Daha kaliteli ve hassas yeni joystickler satın alırsınız.",
+        "finance": -3,
+        "software": 2
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 7,
+    "question": "Yarışma için otel ve ulaşım masrafları planlanandan fazla tutuyor.",
+    "answers": [
+      {
+        "text": "Takım üyelerinden ek katkı payı istersiniz.",
+        "finance": 3,
+        "moral": -4
+      },
+      {
+        "text": "Daha uzak ve ucuz bir otelde kalmayı tercih edersiniz.",
+        "finance": 4,
+        "moral": -2
+      },
+      {
+        "text": "Acil bir ek sponsor bulmak için son kez şirketleri ziyaret edersiniz.",
+        "pr": 3,
+        "finance": 3
+      },
+      {
+        "text": "Robot için ayrılan yedek parça bütçesinden kısarsınız.",
+        "finance": 2,
+        "mechanic": -3
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 7,
+    "question": "Medyada paylaşmak için hazırlanan 'Robot Reveal' (Robot Tanıtım) videosu için yeterli görüntü yok.",
+    "answers": [
+      {
+        "text": "Tüm çalışmayı durdurup bir günü sadece video çekimine ayırırsınız.",
+        "pr": 5,
+        "mechanic": -3
+      },
+      {
+        "text": "Eldeki kısıtlı görüntüleri hızlı kurguyla etkileyici bir teaser haline getirirsiniz.",
+        "pr": 3
+      },
+      {
+        "text": "Videonun kalitesinden ödün verip telefon çekimlerini kullanırsınız.",
+        "pr": 1,
+        "brand_image": -2
+      },
+      {
+        "text": "Reveal videosu yayınlamaktan vazgeçip direkt yarışmaya odaklanırsınız.",
+        "pr": -5,
+        "mechanic": 2
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 7,
+    "question": "Teknik dökümantasyonun (Engineering Notebook) yarışma jürisine sunulmak üzere bitmesi gerekiyor.",
+    "answers": [
+      {
+        "text": "Mekanik ekibi üyelerini gece mesaisine bırakıp dökümanları yazdırırsınız.",
+        "mechanic": -2,
+        "engineering_notebook": 5,
+        "moral": -3
+      },
+      {
+        "text": "Impact ekibinden destek alarak tasarımı şık bir dosya haline getirirsiniz.",
+        "pr": 3,
+        "engineering_notebook": 3
+      },
+      {
+        "text": "Sadece çizimleri koyup metin kısımlarını kısa tutarsınız.",
+        "engineering_notebook": 2
+      },
+      {
+        "text": "Dosyayı yetiştiremeyip sadece jüriyle sözlü mülakata güvenmeye karar verirsiniz.",
+        "engineering_notebook": -5,
+        "award_chance": -4
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 8,
+    "question": "Yarışma alanına vardınız ama pit alanınız beklediğinizden çok daha dar. Malzemeler sığmıyor!",
+    "answers": [
+      {
+        "text": "Düzeni sağlamak için sadece en gerekli takımları bırakıp kalan her şeyi araçta tutarsınız.",
+        "mechanic": 2,
+        "moral": -1
+      },
+      {
+        "text": "Komşu takımlardan alan rica ederek pitleşmeye çalışırsınız.",
+        "pr": 3,
+        "mechanic": 1
+      },
+      {
+        "text": "Dikey raf sistemleri kurarak alanı maksimum verimle kullanırsınız.",
+        "mechanic": 3,
+        "engineering": 2
+      },
+      {
+        "text": "Eşyaları koridora yayarsınız (Güvenlik görevlileriyle sorun yaşama pahasına).",
+        "pr": -3,
+        "mechanic": 1
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 8,
+    "question": "İlk teknik kontrolde (Inspection) robotun bir kablosunun açıkta olduğu ve kural dışı olduğu söylendi.",
+    "answers": [
+      {
+        "text": "Hızla kabloyu uygun şekilde gizleyip tekrar sıraya girersiniz.",
+        "electrical": 4,
+        "mechanic": 1
+      },
+      {
+        "text": "Hakemle kuralın yorumlanması üzerine tartışmaya girersiniz.",
+        "pr": -4,
+        "moral": -2
+      },
+      {
+        "text": "Kabloyu bantla geçici olarak kapatıp maça yetişmeye çalışırsınız.",
+        "electrical": 2,
+        "mechanic": -1
+      },
+      {
+        "text": "Elektrik ekibinden tüm sistemi yeniden kontrol etmesini istersiniz (Zaman kaybı).",
+        "electrical": 3,
+        "mechanic": -2
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 8,
+    "question": "Maç stratejisi toplantısında ittifak ortağınız çok riskli bir plan önerdi.",
+    "answers": [
+      {
+        "text": "Kendi planınızda ısrar eder, ortağınızın sadece savunma yapmasını istersiniz.",
+        "strategy": 2,
+        "pr": -3
+      },
+      {
+        "text": "Riskleri kabul eder, maçı kazanmak için plana uyarsınız.",
+        "strategy": 3,
+        "moral": 2
+      },
+      {
+        "text": "Ortak bir orta yol bulup her iki robotun da güvenli kalacağı bir plan çizersiniz.",
+        "strategy": 4,
+        "pr": 2
+      },
+      {
+        "text": "Strateji ekibini dinlemeyip sürücünün o anki kararına bırakırsınız.",
+        "strategy": -5,
+        "moral": 1
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 8,
+    "question": "Impact sunumu sırasında jüri üyeleri beklenmedik ve zor bir soru sordu.",
+    "answers": [
+      {
+        "text": "Sunum yapan üyeler dürüstçe bilmediklerini ama öğreneceklerini söyler.",
+        "pr": 2,
+        "moral": 1
+      },
+      {
+        "text": "Hızla mantıklı bir cevap uydururlar.",
+        "pr": -2,
+        "moral": -1
+      },
+      {
+        "text": "Hazırladıkları dökümanlardaki verileri kullanarak profesyonelce yanıtlarlar.",
+        "pr": 5,
+        "engineering_notebook": 3
+      },
+      {
+        "text": "Sessiz kalıp kaptanın cevaplaması için beklerler.",
+        "pr": -3,
+        "moral": -2
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 8,
+    "question": "Robotun bataryası ilk maçın ortasında bitti ve robot sahada kaldı.",
+    "answers": [
+      {
+        "text": "Tüm bataryaları test cihazından geçirip bozuk olanları ayırırsınız.",
+        "electrical": 4,
+        "finance": -1
+      },
+      {
+        "text": "Şarj ekibinden (Battery Manager) daha dikkatli olmalarını istersiniz.",
+        "moral": -3,
+        "electrical": 1
+      },
+      {
+        "text": "Hızlı şarj cihazları alarak döngüyü hızlandırırsınız.",
+        "finance": -3,
+        "electrical": 2
+      },
+      {
+        "text": "Yazılımda güç tüketimini azaltacak kısıtlamalar yaparsınız.",
+        "software": 3,
+        "performance": -2
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 9,
+    "question": "Sıralama maçları sırasında robotunuzun en önemli mekanizması bozuldu. Bir sonraki maç 15 dakika sonra. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Mekanizmayı hızlıca söküp robotu sadece savunma yapacak şekilde sahaya sürersiniz.",
+        "mechanic": 3,
+        "strategy": 2,
+        "pr": -1
+      },
+      {
+        "text": "Maçı kaçırma pahasına mekanizmayı tamir etmeye çalışırsınız.",
+        "mechanic": 2,
+        "moral": -2,
+        "strategy": -3
+      },
+      {
+        "text": "Çevredeki diğer takımlardan yardım (tecrübeli mentor/öğrenci) istersiniz.",
+        "pr": 4,
+        "mechanic": 2,
+        "moral": 1
+      },
+      {
+        "text": "Robotu tamir etmeden sahaya çıkarıp rakibi şaşırtmaya çalışırsınız.",
+        "strategy": -5,
+        "moral": -2
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 9,
+    "question": "Scouting (Gözlem) ekibi, verilerin analizinde hata yaptı ve aslında kötü olan bir takımı üst sıralarda gösterdi.",
+    "answers": [
+      {
+        "text": "Hemen tüm ekibi toplayıp verileri manuel olarak tekrar kontrol edersiniz.",
+        "strategy": 4,
+        "moral": -3
+      },
+      {
+        "text": "Hatayı fark etmez ve yanlış veriye güvenerek ittifak seçimi yaparsınız.",
+        "strategy": -5,
+        "pr": -2
+      },
+      {
+        "text": "Diğer dost takımlardan scouting verilerini paylaşmalarını rica edersiniz.",
+        "pr": 3,
+        "strategy": 2
+      },
+      {
+        "text": "Sürücünün gözlemlerine dayanarak listeyi son dakika güncellersiniz.",
+        "strategy": 2,
+        "moral": 1
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 9,
+    "question": "İttifak seçimleri (Alliance Selection) sırasında 1. kaptan olarak seçme sırası size geldi. Hangi takımı seçersiniz?",
+    "answers": [
+      {
+        "text": "Sizinle uyumlu çalışan, savunması güçlü ama puanı düşük bir takımı.",
+        "strategy": 4,
+        "moral": 2
+      },
+      {
+        "text": "Çok yüksek puan alan ama robotu her an bozulabilecek riskli bir takımı.",
+        "strategy": 2,
+        "mechanic": -2
+      },
+      {
+        "text": "Sizinle arası çok iyi olan dost bir takımı (Verilere bakmadan).",
+        "pr": 3,
+        "strategy": -3,
+        "moral": 4
+      },
+      {
+        "text": "Sıralamada size en yakın olan rakibinizi, onları zayıflatmak için seçersiniz.",
+        "strategy": 3,
+        "pr": -2
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 9,
+    "question": "Playoff maçları öncesi takımda büyük bir gerginlik var. Üyeler yorgunluktan hata yapmaya başladı.",
+    "answers": [
+      {
+        "text": "Kısa bir ara verip takıma enerji içeceği ve atıştırmalık dağıtıp moral konuşması yaparsınız.",
+        "moral": 5,
+        "finance": -2
+      },
+      {
+        "text": "Hata yapanları uyarır ve disiplini daha da artırırsınız.",
+        "moral": -5,
+        "mechanic": 1
+      },
+      {
+        "text": "Mentorların yönetimi tamamen devralmasını istersiniz.",
+        "moral": -3,
+        "mechanic": 2
+      },
+      {
+        "text": "Yedek üyeleri sahaya sürerek asil üyelerin dinlenmesini sağlarsınız.",
+        "moral": 3,
+        "strategy": -2
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 9,
+    "question": "Maç sırasında telsiz (Radio) bağlantısı koptu ve robotunuz hareket etmedi.",
+    "answers": [
+      {
+        "text": "Yarışma teknik ekibine (FTA) başvurup saha bağlantısını kontrol ettirirsiniz.",
+        "pr": 2,
+        "electrical": 1
+      },
+      {
+        "text": "Hızla robotun üzerindeki kabloları ve radyo montajını kontrol edersiniz.",
+        "electrical": 4,
+        "mechanic": 1
+      },
+      {
+        "text": "Radyoyu daha korunaklı ve yüksek bir yere monte edersiniz.",
+        "mechanic": 2,
+        "electrical": 3
+      },
+      {
+        "text": "Yazılımdan kaynaklandığını düşünüp kodları baştan yüklersiniz.",
+        "software": 2,
+        "electrical": -1
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "week": 10,
+    "question": "Final maçına çıkmak üzeresiniz ancak ittifak ortağınızın robotu bozuldu ve yedek parça onlarda yok. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Kendi yedek parçalarınızı onlara verir ve tamir etmelerine yardım edersiniz.",
+        "pr": 5,
+        "mechanic": 2,
+        "moral": 3
+      },
+      {
+        "text": "Sadece kendi robotunuza odaklanır, ortağınızın durumunu hakemlere bırakırsınız.",
+        "strategy": 2,
+        "pr": -3
+      },
+      {
+        "text": "Maçın ertelenmesi için teknik ekibe baskı yaparsınız.",
+        "pr": -2,
+        "moral": -1
+      },
+      {
+        "text": "Hızla stratejinizi değiştirip sahada 2 robota karşı tek başınıza yarışmaya hazırlanırsınız.",
+        "strategy": 4,
+        "mechanic": -1
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "week": 10,
+    "question": "Ödül töreninde çok istediğiniz bir ödülü rakip takım kazandı. Takımın morali düştü. Ne yaparsınız?",
+    "answers": [
+      {
+        "text": "Rakip takımı içtenlikle tebrik eder, centilmenlik örneği gösterirsiniz.",
+        "pr": 5,
+        "moral": 2
+      },
+      {
+        "text": "Jürinin kararına itiraz etmek için organizasyon masasına gidersiniz.",
+        "pr": -5,
+        "moral": -2
+      },
+      {
+        "text": "Kendi başarılarınıza odaklanan bir kapanış konuşması yaparsınız.",
+        "moral": 4,
+        "pr": 1
+      },
+      {
+        "text": "Töreni terk edip atölyeye geri dönersiniz.",
+        "moral": -4,
+        "pr": -3
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "week": 10,
+    "question": "Sezon bittiğinde elinizde ciddi miktarda bütçe arttığını fark ettiniz.",
+    "answers": [
+      {
+        "text": "Gelecek sezon için şimdiden pahalı ve kaliteli parçalar sipariş edersiniz.",
+        "finance": -3,
+        "mechanic": 5
+      },
+      {
+        "text": "Bütçeyi bir banka hesabında tutup gelecek yılın kayıt ücreti için saklarsınız.",
+        "finance": 5
+      },
+      {
+        "text": "Yıl sonu yemeği düzenleyip tüm takımı ödüllendirirsiniz.",
+        "moral": 5,
+        "finance": -2
+      },
+      {
+        "text": "Bütçeyi yerel bir sosyal sorumluluk projesine bağışlarsınız.",
+        "pr": 5,
+        "finance": -4
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "week": 10,
+    "question": "Mezun olan tecrübeli üyelerin yerine yeni üyeleri seçerken hangi kritere öncelik verirsiniz?",
+    "answers": [
+      {
+        "text": "Teknik bilgisi çok yüksek olan öğrencilere.",
+        "mechanic": 4,
+        "moral": -1
+      },
+      {
+        "text": "Takım çalışmasına yatkın ve öğrenmeye istekli olanlara.",
+        "moral": 4,
+        "pr": 2
+      },
+      {
+        "text": "Daha önce robotik tecrübesi olan ama bireysel çalışanlara.",
+        "mechanic": 2,
+        "moral": -3
+      },
+      {
+        "text": "Sponsor bulma potansiyeli yüksek olan sosyal öğrencilere.",
+        "finance": 4,
+        "pr": 3
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "week": 10,
+    "question": "Gelecek sezon için mentorlarla değerlendirme toplantısı yapıyorsunuz. İlk gündem maddesi ne olmalı?",
+    "answers": [
+      {
+        "text": "Bu sezon yapılan teknik hataların analizi.",
+        "mechanic": 4,
+        "engineering": 3
+      },
+      {
+        "text": "Takım içi iletişimin ve hiyerarşinin güçlendirilmesi.",
+        "moral": 4,
+        "pr": 2
+      },
+      {
+        "text": "Yeni sponsorluk stratejilerinin belirlenmesi.",
+        "finance": 4,
+        "pr": 3
+      },
+      {
+        "text": "Off-season (sezon dışı) yarışmalarına katılım planı.",
+        "moral": 3,
+        "mechanic": 2,
+        "finance": -2
+      }
+    ]
+  }
+]

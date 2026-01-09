@@ -1,0 +1,10 @@
+^D:\FLUTTERPROJECTS\FRC-MANAGER\BUILD\WINDOWS\X64\CMAKEFILES\18CCCE64D8CA49A502C0BB5A8633996B\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/FlutterProjects/FRC-Manager/windows -BD:/FlutterProjects/FRC-Manager/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/FlutterProjects/FRC-Manager/build/windows/x64/mainscreenforfrcmanager.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
